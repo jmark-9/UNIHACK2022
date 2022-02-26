@@ -8,23 +8,23 @@ body {
     min-height: 100%;
 }
 
-h1 {
+.Title {
     color: rgb(80, 80, 80);
-    font-family: Arial, sans-serif;
     text-align: center;
     font-weight: bolder;
     /* text-shadow: 2px 2px 8px rgb(69, 156, 182); */
+    font-family: 'Varela Round', sans-serif;
 }
 
-h3 {
+.greeting {
     color: rgb(135, 135, 135);
-    font-family: Arial, sans-serif;
+    font-family: 'Varela Round', sans-serif;
     text-align: center;
     /*text-shadow: 2px 2px 8px rgb(194, 166, 171);*/
 }
 
 #centre {
-    background-color: #edf2fb;
+    background-color: red;
     /* border-radius: 30px; */
     margin: 0;
 }
@@ -36,6 +36,17 @@ h3 {
     -webkit-overflow-scrolling: touch;
 }
 
-.scrolling-wrapper    .card {
+.scrolling-wrapper .card {
     display: inline-block;
+}
+
+.button1 {
+    margin: auto auto 0.25rem;
+    display: block;
+    width: 0.25rem;
+    height: 0.25rem;
+    background-color: bisque;
+    justify-content: center;
+    border-radius: 0.25rem;
+    align-items: center;
 }
