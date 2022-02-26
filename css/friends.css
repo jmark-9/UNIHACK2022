@@ -23,10 +23,15 @@ body {
     /*text-shadow: 2px 2px 8px rgb(194, 166, 171);*/
 }
 
-#centre {
-    background-color: red;
-    /* border-radius: 30px; */
-    margin: 0;
+#return {
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1rem;
+    transition-duration: 0.5s;
+}
+
+#return:hover {
+    margin-left: 0.5rem;
 }
 
 .scrolling-wrapper {
@@ -69,11 +74,11 @@ body {
     border-style: none;
     color: rgb(104, 79, 36);
     transition: background-image 1s ease;
+    cursor: pointer;
 }
 
 .button1:hover,
 .button1:focus {
-    cursor: pointer;
     /* background-color: #ddf8c3; */
     background-image: linear-gradient(to bottom right,#addd90,#87b967);
 }
