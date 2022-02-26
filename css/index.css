@@ -28,3 +28,14 @@ h3 {
     /* border-radius: 30px; */
     margin: 0;
 }
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrolling-wrapper    .card {
+    display: inline-block;
+}
