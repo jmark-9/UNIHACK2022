@@ -4,7 +4,7 @@ html {
 
 body {
     background-color: #ffeedd;
-    background-image: linear-gradient(to bottom right,#beeceb,#5cb1cb);
+    background-image: linear-gradient(to bottom right,#beeceb,#3794b1);
     min-height: 100%;
 }
 
@@ -42,7 +42,9 @@ body {
 
 .button-border {
     border-style: solid;
-    border-color: #5cb1cb;
+    border-width: 0.25rem;
+    /* border-color: rgb(108, 154, 252); */
+    border-color: #5D97D1;
     margin: auto;
     width: 20rem;
     justify-content: center;
@@ -57,6 +59,7 @@ body {
     width: 20rem;
     height: 10rem;
     background-color: #c5ecac;
+    background-image: linear-gradient(to bottom right,#c5ecac,#9cc980);
     justify-content: center;
     border-radius: 2rem;
     align-items: center;
@@ -65,11 +68,12 @@ body {
     border-color: white;
     border-style: none;
     color: rgb(104, 79, 36);
-    transition: background-color 0.5s;
+    transition: background-image 1s ease;
 }
 
 .button1:hover,
 .button1:focus {
     cursor: pointer;
-    background-color: #ddf8c3;
+    /* background-color: #ddf8c3; */
+    background-image: linear-gradient(to bottom right,#addd90,#87b967);
 }
