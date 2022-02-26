@@ -51,3 +51,9 @@ body {
     align-items: center;
     display: flex, row;
 }
+
+.button1:hover,
+.button1:focus {
+    cursor: pointer;
+    background-color: rgb(252, 214, 167);
+}
