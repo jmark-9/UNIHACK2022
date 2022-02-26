@@ -54,6 +54,7 @@ body {
     border-color: white;
     border-style: none;
     color: rgb(104, 79, 36);
+    transition: background-color 0.5s;
 }
 
 .button1:hover,

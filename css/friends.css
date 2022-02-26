@@ -3,13 +3,13 @@ html {
 }
 
 body {
-    background-color: #abc4ff;
-    /* background-image: linear-gradient(to bottom right,rgb(192, 228, 255),rgb(154, 186, 233)); */
+    background-color: #ffeedd;
+    background-image: linear-gradient(to bottom right,#beeceb,#5cb1cb);
     min-height: 100%;
 }
 
 .Title {
-    color: rgb(80, 80, 80);
+    color: rgb(104, 79, 36);
     text-align: center;
     font-weight: bolder;
     /* text-shadow: 2px 2px 8px rgb(69, 156, 182); */
@@ -17,7 +17,7 @@ body {
 }
 
 .greeting {
-    color: rgb(135, 135, 135);
+    color: rgb(104, 79, 36);
     font-family: 'Varela Round', sans-serif;
     text-align: center;
     /*text-shadow: 2px 2px 8px rgb(194, 166, 171);*/
@@ -45,15 +45,19 @@ body {
     display: block;
     width: 20rem;
     height: 10rem;
-    background-color: bisque;
+    background-color: #c5ecac;
     justify-content: center;
     border-radius: 2rem;
     align-items: center;
+    font-family: 'Varela Round', sans-serif;
     font-size: 20px;
+    border-color: white;
+    border-style: none;
+    color: rgb(104, 79, 36);
 }
 
 .button1:hover,
 .button1:focus {
     cursor: pointer;
-    background-color: rgb(252, 214, 167);
+    background-color: #ddf8c3;
 }
