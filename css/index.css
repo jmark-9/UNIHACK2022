@@ -41,12 +41,13 @@ body {
 }
 
 .button1 {
-    margin: auto auto 0.25rem;
+    margin: auto auto 0.4rem;
     display: block;
-    width: 0.25rem;
-    height: 0.25rem;
+    width: 20rem;
+    height: 10rem;
     background-color: bisque;
     justify-content: center;
-    border-radius: 0.25rem;
+    border-radius: 2rem;
     align-items: center;
+    display: flex, row;
 }
