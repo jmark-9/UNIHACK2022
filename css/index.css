@@ -3,26 +3,28 @@ html {
 }
 
 body {
-    background-color: rgb(182, 222, 222);
-    background-image: linear-gradient(to bottom right,rgb(192, 228, 255),rgb(154, 186, 233));
+    background-color: #abc4ff;
+    /* background-image: linear-gradient(to bottom right,rgb(192, 228, 255),rgb(154, 186, 233)); */
     min-height: 100%;
 }
 
 h1 {
-    color: white;
+    color: rgb(80, 80, 80);
     font-family: Arial, sans-serif;
     text-align: center;
-    text-shadow: 2px 2px 8px rgb(69, 156, 182);
+    font-weight: bolder;
+    /* text-shadow: 2px 2px 8px rgb(69, 156, 182); */
 }
 
 h3 {
-    color: white;
+    color: rgb(135, 135, 135);
     font-family: Arial, sans-serif;
     text-align: center;
     /*text-shadow: 2px 2px 8px rgb(194, 166, 171);*/
 }
 
 #centre {
-    background-color: rgb(86, 141, 186);
-    border-radius: 30px;
+    background-color: #edf2fb;
+    /* border-radius: 30px; */
+    margin: 0;
 }
