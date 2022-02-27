@@ -39,7 +39,7 @@ function saveFriend() {
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
     today = mm + '/' + dd + '/' + yyyy;
-    newFriend._contactHistory = today;
+    newFriend.addHistory(today);
     currentAccount.addFriend(newFriend);
     // update the accounts list in LS
     updateLSData(ACCOUNT_KEY, reachAccounts);
@@ -62,7 +62,7 @@ if (!dialog.showModal) {
 function displayFriends() {
     let displayArea = document.getElementById("friendsLst");
     let friendLst = '';
-    for (let i = 0; i < reachAccounts._accounts.length; i++) {
+    for (let i = 0; i < currentAccount._friends.length; i++) {
         friendLst += `<div id="friend${i}" class="friends">
         <p class="friendName">${currentAccount._friends[i]._name}</p>
         <hr>
