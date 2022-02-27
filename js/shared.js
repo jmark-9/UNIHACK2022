@@ -8,6 +8,10 @@ class ReachAccounts {
         this._accounts = [];
     }
 
+    addAccount(new_account) {
+        this._accounts.push(new_account)
+    }
+
     searchAccount(username) {
         for (let i = 0; i < this._accounts.length; i++) {
             if (this._accounts[i]._username == username) {
@@ -171,6 +175,3 @@ if (checkLSData(CURRENT_ACCOUNT)) {
     // Restore data into vacationList
     accounts.fromData(data);
 }
-
-// Global vacation variable
-let current_account = reachAccounts.accounts[reachAccounts.searchAccount(username)];
