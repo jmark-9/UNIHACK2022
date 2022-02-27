@@ -74,12 +74,18 @@ body {
 }
 
 #log-out {
+    border: solid;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 1rem;
     margin-left: 1rem;
     transition-duration: 0.5s;
+    color: rgb(104, 79, 36);
+    font-family: 'Varela Round', sans-serif;
 }
 
 #log-out:hover {
     margin-left: 0.5rem;
+    background-color: #cbe9b9;
 }
