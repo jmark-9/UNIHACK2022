@@ -11,7 +11,7 @@ function cancelFriend() {
 
 function saveFriend() {
     // get info
-    let friendNameInput = document.getElementById("fname");
+    let friendNameInput = document.getElementById("fname").value;
     let frequency = ''
     if (document.getElementById("daily").checked) {
         frequency = 1;
@@ -34,50 +34,42 @@ function saveFriend() {
     let newFriend = new Friend();
     newFriend._name = friendNameInput;
     newFriend._contact_frequency = frequency;
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    newFriend._contactHistory = today;
     currentAccount.addFriend(newFriend);
+    // update the accounts list in LS
+    updateLSData(ACCOUNT_KEY, reachAccounts);
     // close dialog
     dialog.close();
+    location.reload();
 }
 
-function notifyMe() {
-    // Let's check if the browser supports notifications
-    if (!("Notification" in window)) {
-      alert("This browser does not support desktop notification");
-    }
-  
-    // Let's check whether notification permissions have already been granted
-    else if (Notification.permission === "granted") {
-      // If it's okay let's create a notification
-      var notification = new Notification("Hi there!");
-    }
-  
-    // Otherwise, we need to ask the user for permission
-    else if (Notification.permission !== "denied") {
-      Notification.requestPermission().then(function (permission) {
-        // If the user accepts, let's create a notification
-        if (permission === "granted") {
-          var notification = new Notification("Hi there!");
-        }
-      });
-    }
-  
-    // At last, if the user has denied notifications, and you
-    // want to be respectful there is no need to bother them any more.
-  }
-  
+var img = '/to-do-notifications/img/icon-128.png';
+var text = 'HEY! Your task is now overdue.';
+var notification = new Notification('To do list', { body: text, icon: img });
 
 // Global code
 // Registers the dialog box polyfill
 let dialog = document.getElementById("addDialog");
-if (!dialog.showModal) 
-{
+if (!dialog.showModal) {
     dialogPolyfill.registerDialog(dialog);
 }
 
 function displayFriends() {
     let displayArea = document.getElementById("friendsLst");
-    friendLst = '';
+    let friendLst = '';
     for (let i = 0; i < reachAccounts._accounts.length; i++) {
-        friendLst += ``
+        friendLst += `<div id="friend${i}" class="friends">
+        <p class="friendName">${currentAccount._friends[i]._name}</p>
+        <hr>
+        <p class="lastMsg">${currentAccount._friends[i]._contactHistory[reachAccounts._accounts[i]._friends._contactHistory.length-1]}</p>
+    </div>`
     }
+    displayArea.innerHTML = friendLst;
 }
+
+displayFriends()
