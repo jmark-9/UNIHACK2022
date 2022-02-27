@@ -4,7 +4,7 @@ html {
 
 body {
     background-color: #ffeedd;
-    background-image: linear-gradient(to bottom right,#beeceb,#3794b1);
+    background-image: linear-gradient(to bottom right, #beeceb, #3794b1);
     min-height: 100%;
 }
 
@@ -64,7 +64,7 @@ body {
     width: 20rem;
     height: 10rem;
     background-color: #c5ecac;
-    background-image: linear-gradient(to bottom right,#c5ecac,#9cc980);
+    background-image: linear-gradient(to bottom right, #c5ecac, #9cc980);
     justify-content: center;
     border-radius: 2rem;
     align-items: center;
@@ -80,5 +80,67 @@ body {
 .button1:hover,
 .button1:focus {
     /* background-color: #ddf8c3; */
-    background-image: linear-gradient(to bottom right,#addd90,#87b967);
+    background-image: linear-gradient(to bottom right, #addd90, #87b967);
+}
+
+.mapsTitle {
+    margin: auto;
+    width: 10rem;
+    height: 4;
+    opacity: auto;
+    display: block;
+    text-align: center;
+    /* background-image: linear-gradient(to bottom right, #c5ecac, #9cc980); */
+    justify-content: center;
+    border-radius: 2rem;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    border-color: rgb(255, 254, 210);
+    border-style: solid;
+    color: rgb(104, 79, 36);
+    ;
+    transition: background-image 1s ease;
+    padding: 2rem;
+}
+
+.mapsContainer {
+    margin: auto auto 2rem;
+    width: 10rem;
+    height: 10rem;
+    opacity: auto;
+    display: block;
+    text-align: center;
+    border-radius: 2rem;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    border-color: rgb(255, 254, 210);
+    border-style: solid;
+    color: rgb(104, 79, 36);
+    padding: 2rem;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.locationSuggestions {
+    margin: auto auto 2rem;
+    width: 10rem;
+    height: 4rem;
+    opacity: auto;
+    display: block;
+    text-align: center;
+    border-radius: 2rem;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    border-color: rgb(255, 254, 210);
+    border-style: solid;
+    color: rgb(104, 79, 36);
+    padding: 2rem;
 }
