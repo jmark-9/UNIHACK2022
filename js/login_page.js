@@ -65,7 +65,8 @@ function signup() {
             alert("Welcome " + user);
             // create new account class instance
             let current_account = new Account();
-            // add accunt to the accounts
+            current_account._username = user;
+            // add account to the accounts
             reachAccounts.addAccount(current_account);
             // update the accounts list in LS
             updateLSData(ACCOUNT_KEY, reachAccounts);

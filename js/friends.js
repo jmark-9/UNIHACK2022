@@ -14,23 +14,24 @@ function saveFriend() {
     let friendNameInput = document.getElementById("fname");
     let frequency = ''
     if (document.getElementById("daily").checked) {
-        frequency = "daily";
+        frequency = 1;
     }
     else if (document.getElementById("weekly").checked) {
-        frequency = "weekly";
+        frequency = 7;
     }
     else if (document.getElementById("fortnightly").checked) {
-        frequency = "fortnightly";
+        frequency = 14;
     }
     else if (document.getElementById("monthly").checked) {
-        frequency = "monthly";
+        frequency = 31;
     }
     else if (document.getElementById("threeMonths").checked) {
-        frequency = "threeMonths";
+        frequency = 63;
     }
     else if (document.getElementById("yearly").checked) {
-        frequency = "yearly";
+        frequency = 365;
     }
+    
     // close dialog
     dialog.close();
 }

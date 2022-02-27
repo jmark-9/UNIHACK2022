@@ -99,11 +99,6 @@ class Friend {
         this._name = newName;
     }
 
-    set contact_history() {
-
-
-    }
-
     set contact_frequency(duration) {
         if (duration == "daily") {
             this._contact_frequency = 1;
@@ -114,6 +109,10 @@ class Friend {
         } else if (duration == "yearly") {
             this._contact_frequency = 365;
         }
+    }
+
+    addHistory(date) {
+        this._contact_history.push(date);
     }
 
     // methods
@@ -169,9 +168,9 @@ function updateLSData(key, data) {
 // Global Accounts variable
 let reachAccounts = new ReachAccounts();
 // Check if data available in LS before continuing
-if (checkLSData(CURRENT_ACCOUNT)) {
+if (checkLSData(ACCOUNT_KEY)) {
     // If data exists, retrieve it
-    let data = retrieveLSData(CURRENT_ACCOUNT);
+    let data = retrieveLSData(ACCOUNT_KEY);
     // Restore data into vacationList
-    accounts.fromData(data);
+    reachAccounts.fromData(data);
 }
