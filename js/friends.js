@@ -19,8 +19,8 @@ function saveFriend() {
     else if (document.getElementById("weekly").checked) {
         frequency = "weekly";
     }
-    else if (document.getElementById("biweekly").checked) {
-        frequency = "biweekly";
+    else if (document.getElementById("fortnightly").checked) {
+        frequency = "fortnightly";
     }
     else if (document.getElementById("monthly").checked) {
         frequency = "monthly";

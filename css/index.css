@@ -51,7 +51,7 @@ body {
     margin: auto auto 0.6rem;
     display: block;
     width: 20rem;
-    height: 10rem;
+    height: 8rem;
     background-color: #c5ecac;
     background-image: linear-gradient(to bottom right, #c5ecac, #9cc980);
     justify-content: center;
@@ -79,6 +79,7 @@ body {
     border-radius: 0.5rem;
     cursor: pointer;
     font-size: 1rem;
+    margin-top: 5rem;
     margin-left: 1rem;
     transition-duration: 0.5s;
     color: rgb(104, 79, 36);
