@@ -8,7 +8,7 @@ class ReachAccounts {
         this._accounts = [];
     }
 
-    
+
 
     searchAccount(username) {
         for (let i = 0; i < this._accounts.length; i++) {
@@ -22,9 +22,35 @@ class ReachAccounts {
 
 // ACCOUNT 
 class Account {
-    constructor() {
-        this._username = ""
+    constructor(name = "", username = "", profile_picture = "") {
+        this._name = name;
+        this._username = username;
+        this._profile_picture = profile_picture;
+        this._friends = [];
     }
+
+    add_friend(new_name, new_frequency) {
+        var new_friend = new Friend();
+        new_friend.name = new_name;
+        new_friend.contact_frequency = new_frequency;
+    }
+
+    get_name() {
+        return this._name;
+    }
+
+    set_name(new_name) {
+        this._name = new_name;
+    }
+
+    remove_friend(freind_name) {
+        for (i = 0; i < this._friends.length; ++i) {
+            if (this._friends[i].name == freind_name) {
+                this._friends[i] = null;
+            }
+        }
+    }
+
 }
 
 // FRIEND CLASS
@@ -135,5 +161,4 @@ if (checkLSData(CURRENT_ACCOUNT)) {
 }
 
 // Global vacation variable
-let current_account = reachAccounts.accounts[searchAccount(username)];
-
+let current_account = reachAccounts.accounts[reachAccounts.searchAccount(username)];
