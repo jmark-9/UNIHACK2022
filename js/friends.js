@@ -46,3 +46,7 @@ if (!dialog.showModal)
 {
     dialogPolyfill.registerDialog(dialog);
 }
+
+function displayFriends() {
+    
+}
