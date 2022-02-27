@@ -2,10 +2,10 @@
 
 // FRIEND CLASS
 class Friend {
-    constructor(name = "", coordinates = []) {
+    constructor(name = "", contact_history = [], contact_frequency) {
         this._name = name;
-        this._coordinates = coordinates;
-        this._isGasStation = false;
+        this._contact_history = contact_history;
+        this._contact_frequency = contact_frequency;
     }
 
     // accessors
@@ -13,12 +13,12 @@ class Friend {
         return this._name;
     }
 
-    get coordinates() {
-        return this._coordinates;
+    get contact_history() {
+        return this._contact_history;
     }
 
-    get isGasStation() {
-        return this._isGasStation;
+    get contact_frequency() {
+        return this._contact_frequency;
     }
 
     // mutators
@@ -26,12 +26,16 @@ class Friend {
         this._name = newName;
     }
 
-    set isGasStation(boolean) {
-        this._isGasStation = boolean;
+    set contact_history() {
+
     }
 
-    set coordinates(newCoordinates) {
-        this._coordinates = newCoordinates;
+    set contact_frequency(duration) {
+        if (duration == "daily") {
+            this.contact_frequency = 1;
+        } else if (duration = "weekly") {
+            this.contact_frequency = 7;
+        }
     }
 
     // methods
