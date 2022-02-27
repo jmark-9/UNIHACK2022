@@ -6,6 +6,15 @@ const ACCOUNT_KEY = "account"
 class ReachAccounts {
     constructor() {
         this._accounts = [];
+        this._accountIndex = "";
+    }
+
+    get accountIndex() {
+        return this._accountIndex;
+    }
+
+    set accountIndex(account) {
+        this._accountIndex = account
     }
 
     addAccount(new_account) {
@@ -27,6 +36,7 @@ class ReachAccounts {
             tempAccount.fromData(data._accounts[i]);
             this._accounts.push(tempAccount);
         }
+        this._accountIndex = data._accountIndex
     }
 }
 
@@ -39,28 +49,27 @@ class Account {
         this._friends = [];
     }
 
-    add_friend(new_name, new_frequency) {
-        var new_friend = new Friend();
-        new_friend.name = new_name;
-        new_friend.contact_frequency = new_frequency;
-    }
-
-    get_name() {
+    
+    get name() {
         return this._name;
     }
-
-    set_name(new_name) {
+    
+    set name(new_name) {
         this._name = new_name;
     }
-
-    remove_friend(friend_name) {
+    
+    removeFriend(friend_name) {
         for (i = 0; i < this._friends.length; ++i) {
             if (this._friends[i].name == friend_name) {
                 this._friends[i] = null;
             }
         }
     }
-
+    
+    addFriend(friend) {
+        this._friends.push(friend);
+    }
+    
     fromData(data) {
         this._name = data._name;
         this._username = data._username;
@@ -174,3 +183,5 @@ if (checkLSData(ACCOUNT_KEY)) {
     // Restore data into vacationList
     reachAccounts.fromData(data);
 }
+
+let currentAccount = reachAccounts._accounts[reachAccounts._accountIndex];

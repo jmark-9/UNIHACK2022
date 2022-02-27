@@ -14,7 +14,7 @@ function checkPassword() {
     // checks password is correct
     else if (MD5(password + SALT) === localStorage.getItem(PREFIX + username)) {
         alert(`Welcome ${username}`)
-        let current_account = reachAccounts.accounts[reachAccounts.searchAccount(username)];
+        reachAccounts._accountIndex = reachAccounts.searchAccount(username);
         window.location = "index.html"
 
     }
@@ -64,10 +64,13 @@ function signup() {
             localStorage.setItem(PREFIX + user, passwordToStore);
             alert("Welcome " + user);
             // create new account class instance
-            let current_account = new Account();
-            current_account._username = user;
+            let newAccount = new Account();
+            newAccount._username = user;
+            newAccount._name = user;
             // add account to the accounts
-            reachAccounts.addAccount(current_account);
+            reachAccounts.addAccount(newAccount);
+            // update index
+            reachAccounts._accountIndex = reachAccounts._accounts.length-1;
             // update the accounts list in LS
             updateLSData(ACCOUNT_KEY, reachAccounts);
             // take user to next page

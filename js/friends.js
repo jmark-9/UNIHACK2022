@@ -31,7 +31,10 @@ function saveFriend() {
     else if (document.getElementById("yearly").checked) {
         frequency = 365;
     }
-    
+    let newFriend = new Friend();
+    newFriend._name = friendNameInput;
+    newFriend._contact_frequency = frequency;
+    currentAccount.addFriend(newFriend);
     // close dialog
     dialog.close();
 }
