@@ -23,11 +23,26 @@ body {
     /*text-shadow: 2px 2px 8px rgb(194, 166, 171);*/
 }
 
+.test {
+    height: 100rem;
+    background-color: #addd90;
+}
+
 #return {
     cursor: pointer;
     font-size: 3rem;
     margin-left: 1rem;
     transition-duration: 0.5s;
+}
+
+#return:hover {
+    margin-left: 0.5rem;
+}
+
+#add {
+    cursor: pointer;
+    font-size: 3rem;
+    float: right;
 }
 
 #return:hover {
@@ -81,4 +96,25 @@ body {
 .button1:focus {
     /* background-color: #ddf8c3; */
     background-image: linear-gradient(to bottom right,#addd90,#87b967);
+}
+
+.form-title {
+    color: #0c233a;
+    text-align: center;
+    font-weight: bolder;
+    /* text-shadow: 2px 2px 8px rgb(69, 156, 182); */
+    font-family: 'Varela Round', sans-serif;
+}
+
+.mdl-dialog {
+    color: #addd90;
+}
+
+.mdl-dialog__content {
+    color: #0c233a;
+    font-family: 'Varela Round', sans-serif;
+}
+
+form {
+    color: #0c233a;
 }
