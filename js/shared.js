@@ -1,5 +1,32 @@
 "use strict";
 
+const ACCOUNT_KEY = "account"
+
+// REACH ACCOUNT
+class ReachAccounts {
+    constructor() {
+        this._accounts = [];
+    }
+
+    
+
+    searchAccount(username) {
+        for (let i = 0; i < this._accounts.length; i++) {
+            if (this._accounts[i]._username == username) {
+                return i;
+            }
+        }
+        alert(`Could not find user`)
+    }
+}
+
+// ACCOUNT 
+class Account {
+    constructor() {
+        this._username = ""
+    }
+}
+
 // FRIEND CLASS
 class Friend {
     constructor(name = "", contact_history = [], contact_frequency) {
@@ -33,13 +60,13 @@ class Friend {
 
     set contact_frequency(duration) {
         if (duration == "daily") {
-            this.contact_frequency = 1;
+            this._contact_frequency = 1;
         } else if (duration == "weekly") {
-            this.contact_frequency = 7;
+            this._contact_frequency = 7;
         } else if (duration == "monthly") {
-            this.contact_frequency = 30;
+            this._contact_frequency = 30;
         } else if (duration == "yearly") {
-            this.contact_frequency = 365;
+            this._contact_frequency = 365;
         }
     }
 
@@ -97,15 +124,16 @@ function updateLSData(key, data) {
     localStorage.setItem(key, json);
 }
 
-// Global VacationList variable
-let vacationList = new VacationList();
+// Global Accounts variable
+let reachAccounts = new ReachAccounts();
 // Check if data available in LS before continuing
-if (checkLSData(VACATIONLIST_KEY)) {
+if (checkLSData(CURRENT_ACCOUNT)) {
     // If data exists, retrieve it
-    let data = retrieveLSData(VACATIONLIST_KEY);
+    let data = retrieveLSData(CURRENT_ACCOUNT);
     // Restore data into vacationList
-    vacationList.fromData(data);
+    accounts.fromData(data);
 }
 
 // Global vacation variable
-let vacation = vacationList.vacations[vacationList.vacations.length - 1];
+let current_account = reachAccounts.accounts[searchAccount(username)];
+

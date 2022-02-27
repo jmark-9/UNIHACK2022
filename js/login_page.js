@@ -16,6 +16,7 @@ function checkPassword()
     else if (MD5(password + SALT) === localStorage.getItem(PREFIX + username)) {
         alert(`Welcome ${username}`)
         window.location = "index.html"
+        
     }
     // alerts of wrong password
     else {
