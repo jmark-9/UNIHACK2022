@@ -151,7 +151,40 @@ form {
     font-family: 'Varela Round', sans-serif;
     font-size: 2rem;
     text-align: center;
-    height: 20rem;
+    height: 25rem;
+    width: 20rem;
     color: rgb(104, 79, 36);
-    ;
+    overflow: scroll;
+}
+
+.friends {
+    margin: auto auto 0.6rem;
+    display: block;
+    width: 16rem;
+    height: 6rem;
+    background-color: #3794b1;
+    /* background-image: linear-gradient(to bottom right, #c5ecac, #9cc980); */
+    justify-content: center;
+    border-radius: 2rem;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    border-color: white;
+    border-style: none;
+    color: #0c233a;
+    transition: background-image 1s ease;
+    cursor: pointer;
+    padding: 2rem;
+}
+
+.friendName {
+    color: #0c233a;
+    text-align: center;
+    padding: 0%;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+hr {
+    color:#0c233a
 }

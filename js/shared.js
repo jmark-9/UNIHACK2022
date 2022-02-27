@@ -84,10 +84,10 @@ class Account {
 
 // FRIEND CLASS
 class Friend {
-    constructor(name = "", contact_history = [], contact_frequency) {
-        this._name = name;
-        this._contact_history = contact_history;
-        this._contact_frequency = contact_frequency;
+    constructor() {
+        this._name = "";
+        this._contactHistory = [];
+        this._contact_frequency = 0;
     }
 
     // accessors
@@ -95,8 +95,8 @@ class Friend {
         return this._name;
     }
 
-    get contact_history() {
-        return this._contact_history;
+    get contactHistory() {
+        return this._contactHistory;
     }
 
     get contact_frequency() {
@@ -109,25 +109,17 @@ class Friend {
     }
 
     set contact_frequency(duration) {
-        if (duration == "daily") {
-            this._contact_frequency = 1;
-        } else if (duration == "weekly") {
-            this._contact_frequency = 7;
-        } else if (duration == "monthly") {
-            this._contact_frequency = 30;
-        } else if (duration == "yearly") {
-            this._contact_frequency = 365;
-        }
+            this._contact_frequency = duration;
     }
 
     addHistory(date) {
-        this._contact_history.push(date);
+        this._contactHistory.push(date);
     }
 
     // methods
     fromData(data) {
         this._name = data._name;
-        this._contact_history = data._contact_history;
+        this._contactHistory = data._contactHistory;
         this._contact_frequency = data._contact_frequency;
     }
 
