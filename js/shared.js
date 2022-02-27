@@ -33,8 +33,12 @@ class Friend {
     set contact_frequency(duration) {
         if (duration == "daily") {
             this.contact_frequency = 1;
-        } else if (duration = "weekly") {
+        } else if (duration == "weekly") {
             this.contact_frequency = 7;
+        } else if (duration == "monthly") {
+            this.contact_frequency = 30;
+        } else if (duration == "yearly") {
+            this.contact_frequency = 365;
         }
     }
 
@@ -59,7 +63,7 @@ class Friend {
  * @param {string} key LS Key to be used
  * @returns true or false representing if data exists at key in LS
  */
- function checkLSData(key) {
+function checkLSData(key) {
     if (localStorage.getItem(key) != null) {
         return true;
     }
@@ -76,9 +80,7 @@ function retrieveLSData(key) {
     let data = localStorage.getItem(key);
     try {
         data = JSON.parse(data);
-    }
-    catch (err) { }
-    finally {
+    } catch (err) {} finally {
         return data;
     }
 }
