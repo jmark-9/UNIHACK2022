@@ -3,7 +3,10 @@
 function addFriendForm() {
     // display dialog box pop-up
     dialog.showModal();
+}
 
+function cancelFriend() {
+    dialog.close();
 }
 
 // Global code
