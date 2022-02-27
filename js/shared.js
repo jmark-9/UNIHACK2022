@@ -28,6 +28,7 @@ class Friend {
 
     set contact_history() {
 
+
     }
 
     set contact_frequency(duration) {
