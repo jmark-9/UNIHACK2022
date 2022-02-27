@@ -8,8 +8,6 @@ class ReachAccounts {
         this._accounts = [];
     }
 
-
-
     searchAccount(username) {
         for (let i = 0; i < this._accounts.length; i++) {
             if (this._accounts[i]._username == username) {
@@ -17,6 +15,14 @@ class ReachAccounts {
             }
         }
         alert(`Could not find user`)
+    }
+
+    fromData(data) {
+        for (let i = 0; i < data._accounts.length; i++) {
+            let tempAccount = new Account();
+            tempAccount.fromData(data._accounts[i]);
+            this._accounts.push(tempAccount);
+        }
     }
 }
 
@@ -43,14 +49,24 @@ class Account {
         this._name = new_name;
     }
 
-    remove_friend(freind_name) {
+    remove_friend(friend_name) {
         for (i = 0; i < this._friends.length; ++i) {
-            if (this._friends[i].name == freind_name) {
+            if (this._friends[i].name == friend_name) {
                 this._friends[i] = null;
             }
         }
     }
 
+    fromData(data) {
+        this._name = data._name;
+        this._username = data._username;
+        this._profile_picture = data._profile_picture;
+        for (let i = 0; i < data._friends.length; i++) {
+            let tempFriend = new Friend();
+            tempFriend.fromData(data._friends[i]);
+            this._friends.push(tempFriend);
+        }
+    }
 }
 
 // FRIEND CLASS
@@ -97,14 +113,10 @@ class Friend {
     }
 
     // methods
-    /**
-     * fromData function
-     * Retrieves data from storage back into the class instance
-     * @param {object} data an instance of the location class
-     */
     fromData(data) {
         this._name = data._name;
-        this._coordinates = data._coordinates;
+        this._contact_history = data._contact_history;
+        this._contact_frequency = data._contact_frequency;
     }
 
 }
