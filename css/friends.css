@@ -128,3 +128,9 @@ form {
     font-family: 'Varela Round', sans-serif;
     border-radius: 2rem;
 }
+
+.friendsLst {
+    padding: 0.5rem;
+    border: 0.2rem;
+    margin: auto;
+}
