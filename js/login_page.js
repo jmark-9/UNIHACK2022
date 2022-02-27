@@ -15,6 +15,8 @@ function checkPassword() {
     else if (MD5(password + SALT) === localStorage.getItem(PREFIX + username)) {
         alert(`Welcome ${username}`)
         reachAccounts._accountIndex = reachAccounts.searchAccount(username);
+        // update the accounts list in LS
+        updateLSData(ACCOUNT_KEY, reachAccounts);
         window.location = "index.html"
 
     }

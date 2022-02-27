@@ -66,7 +66,7 @@ function displayFriends() {
         friendLst += `<div id="friend${i}" class="friends">
         <p class="friendName">${currentAccount._friends[i]._name}</p>
         <hr>
-        <p class="lastMsg">${currentAccount._friends[i]._contactHistory[reachAccounts._accounts[i]._friends._contactHistory.length-1]}</p>
+        <p class="lastMsg">${currentAccount._friends[i]._contactHistory[currentAccount._friends[i]._contactHistory.length-1]}</p>
     </div>`
     }
     displayArea.innerHTML = friendLst;
