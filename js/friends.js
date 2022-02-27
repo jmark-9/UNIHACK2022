@@ -48,10 +48,6 @@ function saveFriend() {
     location.reload();
 }
 
-var img = '/to-do-notifications/img/icon-128.png';
-var text = 'HEY! Your task is now overdue.';
-var notification = new Notification('To do list', { body: text, icon: img });
-
 // Global code
 // Registers the dialog box polyfill
 let dialog = document.getElementById("addDialog");
