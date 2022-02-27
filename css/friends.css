@@ -129,6 +129,15 @@ form {
     border-radius: 2rem;
 }
 
+.friendsTitle {
+    display: block;
+    padding: 0.5rem;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(104, 79, 36);
+}
+
 .friendsLst {
     padding: 0.5rem;
     border: 0.2rem;
