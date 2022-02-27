@@ -1,3 +1,85 @@
 html {
     height: 100%;
 }
+
+body {
+    background-color: #ffeedd;
+    background-image: linear-gradient(to bottom right, #beeceb, #3794b1);
+    min-height: 100%;
+}
+
+.Title {
+    color: rgb(104, 79, 36);
+    text-align: center;
+    font-weight: bolder;
+    /* text-shadow: 2px 2px 8px rgb(69, 156, 182); */
+    font-family: 'Varela Round', sans-serif;
+}
+
+.greeting {
+    color: rgb(104, 79, 36);
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    /*text-shadow: 2px 2px 8px rgb(194, 166, 171);*/
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrolling-wrapper .card {
+    display: inline-block;
+}
+
+.button-border {
+    border-style: solid;
+    border-width: 0.25rem;
+    /* border-color: rgb(108, 154, 252); */
+    border-color: #5D97D1;
+    margin: auto;
+    width: 20rem;
+    justify-content: center;
+    display: block;
+    padding: 3rem;
+    border-radius: 2rem;
+}
+
+.button1 {
+    margin: auto auto 0.6rem;
+    display: block;
+    width: 20rem;
+    height: 10rem;
+    background-color: #c5ecac;
+    background-image: linear-gradient(to bottom right, #c5ecac, #9cc980);
+    justify-content: center;
+    border-radius: 2rem;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    border-color: white;
+    border-style: none;
+    color: rgb(104, 79, 36);
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.button1:hover,
+.button1:focus {
+    /* background-color: #ddf8c3; */
+    background-image: linear-gradient(to bottom right, #addd90, #87b967);
+    box-shadow: 5px 12px 16px 0 rgba(0, 0, 0, 0.24), 8px 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#log-out {
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1rem;
+    transition-duration: 0.5s;
+}
+
+#log-out:hover {
+    margin-left: 0.5rem;
+}
